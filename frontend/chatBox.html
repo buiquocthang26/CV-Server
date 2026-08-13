@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Chat - Bùi Quốc Thắng</title>
+    <link rel="stylesheet" href="chatBox.css">
+</head>
+<body>
+
+    <!-- Top bar: logo + name (top left) -->
+    <div class="topbar">
+        <div class="brand">
+            <div class="brand-logo">BQ</div>
+            <div class="brand-text">
+                <span class="brand-name">Bùi Quốc Thắng</span>
+                <span class="brand-tag">Global Chat</span>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <span class="status-pill"><span class="status-dot"></span>Connected</span>
+            <a href="index.html" class="back-link">&larr; Back to CV</a>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <!-- Column 1: Chat selection -->
+        <div class="col chat-list-col">
+            <div class="col-header">
+                <span class="col-title">Chats</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="🔍 Search chats...">
+            </div>
+            <ul class="chat-list" id="chatList">
+                <li class="chat-item active" data-chat="global">
+                    <div class="avatar room">#</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Global Room</div>
+                        <div class="chat-item-preview">Welcome to the global chat!</div>
+                    </div>
+                    <div class="chat-item-meta">
+                        <span class="chat-item-time">09:41</span>
+                        <span class="unread-badge">3</span>
+                    </div>
+                </li>
+                <li class="chat-item" data-chat="long">
+                    <div class="avatar">HL
+                        <span class="online-dot"></span>
+                    </div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Đặng Võ Hoàng Long</div>
+                        <div class="chat-item-preview">Pushed the fix to the feature branch</div>
+                    </div>
+                    <div class="chat-item-meta">
+                        <span class="chat-item-time">08:15</span>
+                    </div>
+                </li>
+                <li class="chat-item" data-chat="recruiter">
+                    <div class="avatar">HR</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Recruiter · TechCorp</div>
+                        <div class="chat-item-preview">Thanks for applying! Quick question...</div>
+                    </div>
+                    <div class="chat-item-meta" >
+                        <span class="chat-item-time">Yesterday</span>
+                    </div>
+                </li>
+                <li class="chat-item" data-chat="mentor">
+                    <div class="avatar">GV</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-name">Course Mentor</div>
+                        <div class="chat-item-preview">Great job on the auth module</div>
+                    </div>
+                    <div class="chat-item-meta">
+                        <span class="chat-item-time">Mon</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Chat box -->
+        <div class="col chat-box-col">
+            <div class="chat-thread-header">
+                <div class="thread-who">
+                    <div class="avatar room">#</div>
+                    <div>
+                        <div class="thread-name" id="threadName">Global Room</div>
+                        <div class="thread-status" id="threadStatus">● 12 members online</div>
+                    </div>
+                </div>
+                <div class="thread-actions">
+                    <button class="icon-btn" title="Search in chat">🔍</button>
+                    <button class="icon-btn" title="Chat info">ℹ</button>
+                </div>
+            </div>
+
+            <div class="messages" id="messages">
+                <span class="day-divider">Today</span>
+            </div>
+
+            <div class="composer">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button class="send-btn" id="sendBtn">➤</button>
+            </div>
+        </div>
+
+        <!-- Column 3: Functionality -->
+        <div class="col func-col">
+            <div class="func-block">
+                <div class="profile-summary">
+                    <div class="profile-avatar">BQ</div>
+                    <div class="profile-name">Bùi Quốc Thắng</div>
+                    <div class="profile-role">Junior Frontend / Full-Stack Developer</div>
+                </div>
+            </div>
+
+            <div class="func-block">
+                <div class="func-block-title">Quick Actions</div>
+                <ul class="func-list">
+                    <li><span class="icon">👤</span> View profile</li>
+                    <li><span class="icon">🔔</span> Notification settings</li>
+                    <li><span class="icon">📌</span> Pinned messages</li>
+                    <li><span class="icon">🚫</span> Block user</li>
+                </ul>
+            </div>
+
+            <div class="func-block">
+                <div class="func-block-title">Preferences</div>
+                <div class="toggle-row">
+                    <span>Notifications</span>
+                    <div class="switch on" data-toggle></div>
+                </div>
+                <div class="toggle-row">
+                    <span>Sound</span>
+                    <div class="switch" data-toggle></div>
+                </div>
+                <div class="toggle-row">
+                    <span>Dark mode</span>
+                    <div class="switch" data-toggle></div>
+                </div>
+            </div>
+
+            <div class="func-block">
+                <div class="func-block-title">Shared Files</div>
+                <div class="shared-files">
+                    <div class="file-row"><span class="file-icon">PDF</span> CV_BuiQuocThang.pdf</div>
+                    <div class="file-row"><span class="file-icon">PNG</span> auth-flow-diagram.png</div>
+                    <div class="file-row"><span class="file-icon">JS</span> jwt.middleware.js</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="chatBox.js"></script>
+</body>
+</html>

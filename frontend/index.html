@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Bùi Quốc Thắng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+    <table class="header-table">
+        <tr>
+            <td class="title-area">
+                <h1>BÙI QUỐC THẮNG</h1>
+                <div class="subtitle">Junior Frontend / Full-Stack Developer</div>
+            </td>
+            <td class="contact-area">
+                <button id="openLoginBtn" class="contact-btn">🔒 Sign In</button>
+                <button id="openContactBtn" class="contact-btn">✉ Contact Me</button>
+                <button id="openChatBtn" class="contact-btn contact-btn-chat">💬 Global Chat</button>
+                <div style="margin-top: 8px;">
+                    📍 Ho Chi Minh City, Vietnam<br>
+                    📧 quocthangbui.it@gmail.com<br>
+                    🔗 github.com/WinVI69
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="loginModal" class="modal-overlay">
+    <div class="modal-content">
+        <span id="closeLoginBtn" class="close-btn">&times;</span>
+
+        <!-- Tabs -->
+        <div class="auth-tabs">
+            <button class="auth-tab active" id="tabRegister">Register</button>
+            <button class="auth-tab" id="tabLogin">Login</button>
+        </div>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form">
+            <div class="form-group">
+                <label for="registerUsername">Username</label>
+                <input type="text" id="registerUsername" required placeholder="Your username">
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" required placeholder="Min. 6 characters">
+            </div>
+            <button type="submit" class="submit-btn">Create Account</button>
+        </form>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form" style="display:none;">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required placeholder="Your password">
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+</div>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+        <span id="closeContactBtn" class="close-btn">&times;</span>
+        <h3>Send a Message</h3>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="callerName">Name</label>
+                <input type="text" id="callerName" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="callerEmail">Email</label>
+                <input type="email" id="callerEmail" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="callerMessage">Message</label>
+                <textarea id="callerMessage" rows="4" required placeholder="Type your message here..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+    <h2>Professional Summary</h2>
+    <p class="summary-text">
+        Ambitious Computer Science student at International University, VNU-HCM, specializing in frontend architectures and modern full-stack web technologies. Adept at transforming complex computational logic into responsive, fluid, and intuitive user experiences. Exhibited strong version control discipline and clean coding practices through rigorous engineering projects. Ready to contribute technical adaptability and dedicated problem-solving skills to an engineering team.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills-list"><span class="skills-label">Languages:</span> JavaScript (ES6+), Java (J2EE), HTML5, CSS3, SQL.</div>
+    <div class="skills-list"><span class="skills-label">Frameworks & Technologies:</span> JSP, Servlets, PostgreSQL, MIPS Assembly.</div>
+    <div class="skills-list"><span class="skills-label">Tools & Platforms:</span> Git, GitHub, IntelliJ IDEA, VS Code, SQL Server (SSMS), Canva.</div>
+    <div class="skills-list"><span class="skills-label">Core Competencies:</span> Data Structures & Algorithms, Computer Architecture, Responsive Layout Design.</div>
+
+    <h2>Key Technical Projects</h2>
+    
+    <table class="section-table">
+        <tr>
+            <td class="left-col">Java Tetris Implementation</td>
+            <td class="right-col">
+                <div class="project-block">
+                    <div class="project-header">Data Structures & Algorithms Project</div>
+                    <div class="project-tech">Java, OOP, Git, GitHub</div>
+                    <ul>
+                        <li>Engineered a fully functional desktop Tetris game optimizing matrix-based block rotations, edge collisions, and dynamic line-clearing operations.</li>
+                        <li>Utilized strict Object-Oriented Programming (OOP) principles to isolate game state logic cleanly from presentation rendering.</li>
+                        <li>Maintained consistent version control and branching strategies on GitHub, ensuring clean commit histories and structured codebase design.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="left-col">Healthcare Management System</td>
+            <td class="right-col">
+                <div class="project-block">
+                    <div class="project-header">Web-Based Hospital Assistance Application (In Development)</div>
+                    <div class="project-tech">HTML5, CSS3, JavaScript, Java JSP, Servlets, Relational Database</div>
+                    <ul>
+                        <li>Designing a responsive digital dashboard dedicated to minimizing medical staff communication overhead during periods of hospital overload.</li>
+                        <li>Developing clean, semantic frontend templates with robust JavaScript form validations and strict state handling.</li>
+                        <li>Structuring modular backend servlets to handle asynchronous transactional data interactions reliably.</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Education</h2>
+    <table class="section-table">
+        <tr>
+            <td class="left-col">2024 — Present</td>
+            <td class="right-col">
+                <div class="edu-title">International University, VNU-HCM</div>
+                <div class="edu-sub">Bachelor of Science in Computer Science &bull; Student ID: ITCSIU24077</div>
+                <ul>
+                    <li><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Computer Architecture (MIPS), Linear Algebra, Software Engineering Foundations.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Languages & Professional Soft Skills</h2>
+    <table class="section-table">
+        <tr>
+            <td class="left-col">Languages</td>
+            <td class="right-col">
+                <strong>Vietnamese:</strong> Native &bull; 
+                <strong>English:</strong> Professional Working Proficiency &bull; 
+                <strong>Dutch:</strong> Elementary (Self-studying weekly)
+            </td>
+        </tr>
+        <tr>
+            <td class="left-col">Key Skills</td>
+            <td class="right-col">
+                Technical Documentation, UI/UX Presentation Design (Canva), Strong Analytical Logic, Iterative Problem Solving.
+            </td>
+        </tr>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
